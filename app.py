@@ -118,7 +118,7 @@ def quiz():
 
     {
         "question": "For Fiscal year 2021, what was your total GhG Carbon Emission for all scopes?",
-        "answers": [
+        "distractors": [
             "Scope 1 - Determine environmental impact levels.",
             "Scope 2 - Reduce carbon footprints.",
             "Scope 3 - Enhance environmental impacts on a larger scale.",
@@ -127,7 +127,7 @@ def quiz():
     },
     {
         "question": "Another question?",
-        "answers": [
+        "distractors": [
             "Option 1",
             "Option 2",
             "Option 3",
@@ -139,14 +139,15 @@ def quiz():
     # Add more questions and answers as needed
     ]
     if request.method == 'POST':
-            questionText = request.form.get('questionText')
-            print(f"Launching quiz for subject: {questionText}")
-            quiz_data = utils.generateQuestions(questionText, 10, model=model)
+        print("post method ************")
+        questionText = request.form.get('questionText')
+        print(f"Launching quiz for subject: {questionText}")
+        quiz_data = utils.generateQuestions(questionText, 10, model=model)
 
-            # return redirect(url_for('quiz'))
-            render_template('quiz.html' , quiz_data=quiz_data)
+        # return redirect(url_for('quiz'))
+        render_template('quiz.html' , quiz_data=quiz_data)
     
-    return render_template('quiz.html')
+    return render_template('quiz.html', quiz_data=quiz_data)
             
 
 
