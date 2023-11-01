@@ -1,0 +1,9 @@
+{
+    "login": {
+        "user@gmail.com": "password"
+    },
+    "scores":{
+        "Math": 80, "Science": 90, "Python":89, "Networks":92
+    },
+    "question_data": {}
+}

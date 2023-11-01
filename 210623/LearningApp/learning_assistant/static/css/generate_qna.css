@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,500;1,600;1,900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+
+
+    height: 100vh;
+    display: flex;
+    padding: 1rem;
+    background-color: #503E9D;
+}
+
+.sidebar {
+    flex: 20%;
+}
+
+.sidebar .logo {
+   margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .logo h1 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    color: white;
+
+    width: 56px;
+    display: grid;
+    place-items: center;
+
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #6553B2;
+}
+.sidebar .logo h2 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+   color: white;
+}
+
+
+.menu {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap :2rem;
+    justify-content: space-between;
+    
+}
+
+
+.menu-item{
+   
+    display: flex ;
+    align-items: center;
+    gap : 1rem;
+    color: white;
+    padding: 1rem;
+    border-radius: 32px 0px 0px 32px;
+
+}
+.active-link{
+    background-color: white;
+    color: #FB6D3A;
+  }
+   
+
+.main-section {
+    flex: 80%;
+    background-color: white;
+    border-radius: 3rem;
+    padding: 2rem;
+}
+
+
+.cancel-btn{
+    color: white;
+    padding: .5rem 2rem;
+    background-color: #61439A;
+    margin: 1rem 0 ;
+}
+
+#modal::backdrop{
+    opacity: 50%;
+    background-image: linear-gradient(to right , rgb(47, 42, 42) , rgb(216, 219, 216));
+}
+
+.modal-container{
+    background-color: white;
+     
+    
+     position: absolute;
+     top : 50%;
+     left: 50%;
+     transform: translate(-50% , -50%);
+     padding: 4rem;
+     text-align: center;
+     border: none;
+     outline: none;
+     border-radius: 15px;
+     border: 2px solid rgba(0, 0, 0, 0.12);
+     box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.12);
+     
+     
+
+}
+
+ .modal-container buuton img{
+  position: absolute;
+  border : 2px solid #61439A;
+  border-radius: 50%;
+  padding: 2px;
+  top : 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+
+} 

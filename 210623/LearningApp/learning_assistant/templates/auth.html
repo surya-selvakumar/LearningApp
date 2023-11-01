@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='./css/auth.css') }}">
+</head>
+
+<body>
+
+    <div class="main-section">
+        <div class="form-container">
+            <div class="btn-container">
+                <button id="login-toogle-btn" class=" btn  active-btn  ">Login</button>
+                <button id="signup-toogle-btn" class=" btn ">Sign up</button>
+            </div>
+            <form id="login-form" class="form" method="POST" action="/">
+                <div>
+                    <h1 class="form-title">Login</h1>
+                    <p>Welcome back! Please enter your details.</p>
+                </div>
+
+                <input required type="email" name="login-email" id="login-email" class="form-input"
+                    placeholder="Enter the Email" />
+                <input required type="password" name="login-password" id="login-password" class="form-input"
+                    placeholder="Enter the password" />
+                <!-- <div class=" checkbox-div " >
+                     <input type="checkbox"  />  
+                     <p>Remember information</p>
+                </div>
+               -->
+
+                <button type="submit" id="login-btn" class="login-btn"> Login</button>
+
+
+            </form>
+            <form method="POST" action="/signup" id="signup-form" class="form signup-form">
+                <div>
+                    <h1 class="form-title">Sign Up</h1>
+                    <p>Create your account </p>
+                </div>
+
+                <input type="email" name="signup-email" id="signup-email" class="form-input" placeholder="Enter the Email" />
+                <input type="password" name="signup-password" id="signup-password" class="form-input" placeholder="Enter the password" />
+                <input type="password" name="confirm-signup-password" id="confirm-signup-password" class="form-input" placeholder="Confirm password" />
+
+
+
+                <button type="submit" id="signup-btn" class="signup-btn"> Sign Up</button>
+
+
+
+
+            </form>
+        </div>
+
+    </div>
+    <div class="image-section">
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+
+
+    </script>
+</body>
+
+</html>
