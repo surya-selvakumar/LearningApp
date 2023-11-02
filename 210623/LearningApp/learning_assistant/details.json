@@ -1,6 +1,7 @@
 {
     "login": {
-        "user@gmail.com": "password"
+        "user@gmail.com": "password",
+        "potalamohini@gmail.com": "12345"
     },
     "scores":{
         "Math": 80, "Science": 90, "Python":89, "Networks":92
